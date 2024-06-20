@@ -1,0 +1,113 @@
+#HTML...
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="profile-image">
+            <img src="profile.jpg" alt="Profile Picture">
+        </div>
+        <h1>Sruthi kothakonda</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm sruthi, a passionate web developer with experience in creating dynamic and responsive websites. I love coding and designing user-friendly interfaces.</p>
+    </section>
+
+    <section class="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project One</h3>
+            <p>Description of project one.</p>
+        </div>
+        <div class="project">
+            <h3>Project Two</h3>
+            <p>Description of project two.</p>
+        </div>
+    </section>
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: sruthi.kothakonda@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/johndoe/">linkedin.com/in/johndoe</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 sruthi. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+
+#CSS..
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333;
+    color: white;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+}
+
+.about,
+.projects,
+.contact {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
