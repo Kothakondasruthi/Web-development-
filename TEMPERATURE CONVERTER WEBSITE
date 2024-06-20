@@ -1,0 +1,114 @@
+#HTML....
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="converter">
+            <input type="text" id="temperature" placeholder="Enter temperature">
+            <select id="unit">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            <button id="convertButton">Convert</button>
+        </div>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+#CSS....
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.converter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#temperature {
+    width: 150px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#unit {
+    padding: 5px;
+    font-size: 16px;
+}
+
+#convertButton {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#JAVASCRIPT...
+document.getElementById('convertButton').addEventListener('click', function() {
+    const temperatureInput = document.getElementById('temperature').value.trim();
+    const unit = document.getElementById('unit').value;
+    const resultDiv = document.getElementById('result');
+
+    if (temperatureInput === '' || isNaN(temperatureInput)) {
+        resultDiv.textContent = 'Please enter a valid number';
+        return;
+    }
+
+    const temperature = parseFloat(temperatureInput);
+
+    let result;
+    if (unit === 'Celsius') {
+        const fahrenheit = (temperature * 9 / 5) + 32;
+        const kelvin = temperature + 273.15;
+        result = `${temperature}°C = ${fahrenheit.toFixed(2)}°F = ${kelvin.toFixed(2)}K`;
+    } else if (unit === 'Fahrenheit') {
+        const celsius = (temperature - 32) * 5 / 9;
+        const kelvin = celsius + 273.15;
+        result = `${temperature}°F = ${celsius.toFixed(2)}°C = ${kelvin.toFixed(2)}K`;
+    } else if (unit === 'Kelvin') {
+        const celsius = temperature - 273.15;
+        const fahrenheit = (celsius * 9 / 5) + 32;
+        result = `${temperature}K = ${celsius.toFixed(2)}°C = ${fahrenheit.toFixed(2)}°F`;
+    }
+
+    resultDiv.textContent = result;
+});
