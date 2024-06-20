@@ -1,0 +1,118 @@
+#HTML....
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Tribute to Jane Doe</h1>
+        </header>
+        <section class="intro">
+            <img src="jane_doe.jpg" alt="Jane Doe" class="profile-img">
+            <p class="description">Jane Doe has been an inspiration to me because of her incredible dedication to education and community service.</p>
+        </section>
+        <section class="content">
+            <h2>Life and Achievements</h2>
+            <p>Jane Doe was born in 1975 and grew up in a small town. From an early age, she showed a strong passion for learning and helping others. She went on to earn a degree in education and has since dedicated her life to teaching and community outreach.</p>
+            <p>Throughout her career, Jane has received numerous awards for her innovative teaching methods and her commitment to her students. Her efforts have not only improved education in her local community but have also inspired many to follow in her footsteps.</p>
+
+            <h2>Memorable Events</h2>
+            <ul>
+                <li><strong>1998:</strong> Jane graduates with honors from State University.</li>
+                <li><strong>2005:</strong> Receives the Teacher oof the Year Award for her outstanding contributions to education.</li>
+                <li><strong>2012:</strong> Launches a community literacy program that significantly increases reading levels in the area.</li>
+            </ul>
+        </section>
+        <footer>
+            <p>Created with love by [Your Name]</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+#CSS.....
+
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.intro {
+    margin: 20px 0;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.description {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+}
+
+.content h2 {
+    font-size: 2em;
+    color: #0073e6;
+    margin-top: 20px;
+}
+
+.content p,
+.content ul {
+    text-align: left;
+    color: #555;
+    line-height: 1.6em;
+}
+
+.content ul {
+    list-style-type: disc;
+    margin: 10px 0 10px 20px;
+    padding: 0;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+}
